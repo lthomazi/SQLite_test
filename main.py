@@ -26,6 +26,7 @@ try:
 
     # insert into database a tuple with three values
     cursor.executemany("insert into gta values (?,?,?)", release_list)
+    connection.commit()
 except:
     print("Data base exists")
 
